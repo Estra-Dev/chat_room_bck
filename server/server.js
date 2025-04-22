@@ -34,6 +34,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to chat room" });
+});
+
 server.listen(PORT, () => {
   console.log(`Server is listening on port http://localhost:${PORT}`);
 });
